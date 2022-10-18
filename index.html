@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function mybutton(){
+            document.getElementById("change").style.borderRadius="10%";
+        }
+        function reverse(){
+            document.getElementById("change").style.borderRadius="50%";
+        }
+    </script>
+    <style>
+        body{
+            margin:0%;
+            background-color:black;
+        }
+        .cnt{
+            background-color: blueviolet;
+            position: relative;
+            top:50%;
+            left:30%;
+            height:400px;
+            width: 500px;
+            border-radius: 50%;
+        }
+        .st2{
+            position:absolute;
+            top:48%;
+            right:25%;
+        }
+        .st1{
+            position:absolute;
+            top:29%;
+            right:25%;
+        }
+        label{
+            position:absolute;
+            left:25%;
+            width:100px;
+        }
+        .rt{
+            top:48%;
+            text-shadow: #FC0 1px 0 10px;
+        }
+        .st1,.st2{
+            background-color: rosybrown;
+        }
+            .nt{
+                top:28%;
+                text-shadow: #FC0 1px 0 10px;
+            }
+            .st1:focus,.st2:focus{
+                background-color:violet;
+            }
+    </style>
+    <div class="cnt" id="change" onmouseover="mybutton()" onmouseout="reverse()">
+        <label class="nt">Name:</label>
+        <input type="text" class="st1" placeholder="your name" id="name" value="">
+        <label class="rt">Roll No:</label>
+    <input type="text" class ="st2" placeholder="your rollno" id="name" value="">
+    </div>
+</body>
+</html>
